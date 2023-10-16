@@ -1,0 +1,31 @@
+{
+  "name": "Blog",
+  "description": "A blog power-up that adds blog functionality to your application",
+  "cover": "https://raw.githubusercontent.com/eduardogamer78/blog/main/_ignore/art/cover.jpg",
+  "includes": [
+    "pages",
+    "models",
+    "migrations"
+  ],
+  "pages": [
+    "pages/blog/index.blade.php",
+    "pages/blog/[Post:slug].blade.php"
+  ],
+  "tables":[
+    "posts"
+  ],
+  "models": [
+    "App\\Models\\Post"
+  ],
+  "run_affeter_install": {
+    "commands": [
+      "migrate"
+    ],
+    "factories": [
+      {
+        "model": "App\\Models\\Post",
+        "count": "10"
+      }
+    ]
+  }
+}
