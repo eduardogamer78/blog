@@ -34,9 +34,9 @@ class Post extends Model
     public function scopeList($query)
     {
         return $query->orderBy('created_at', 'DESC')
-            ->excludeFeatured()
-            ->typePost()
-            ->published();
+        ->excludeFeatured()
+        ->typePost()
+        ->published();
     }
 
     public function user()
