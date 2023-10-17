@@ -1,5 +1,6 @@
 <x-layouts.marketing>
   <x-ui.marketing.breadcrumbs :crumbs="[
+    [
      'href' => '/blog',
      'text' => 'Blog'
    ],

@@ -3,7 +3,7 @@
 use App\Models\Post;
 use function Livewire\Volt\{with, state, rules, mount, usesPagination};
 
-usePagination();
+usesPagination();
 
 state([
   'numResults' => 6,
@@ -14,7 +14,7 @@ state([
   'sortOrder' => 'desc'
 ]);
 
-mount(function() {
+mount(function (){
   $this->results = $this->numResults;
   $this->total = Post::count();
 });
